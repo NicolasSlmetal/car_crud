@@ -1,4 +1,4 @@
-package com.projeto1.connection;
+package com.firstproject.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

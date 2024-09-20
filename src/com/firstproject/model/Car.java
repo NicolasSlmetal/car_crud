@@ -1,8 +1,8 @@
-package com.projeto1.model;
+package com.firstproject.model;
 
-import com.projeto1.exceptions.EmptyFieldException;
-import com.projeto1.exceptions.InvalidPortsNumberException;
-import com.projeto1.exceptions.InvalidYearException;
+import com.firstproject.exceptions.EmptyFieldException;
+import com.firstproject.exceptions.InvalidPortsNumberException;
+import com.firstproject.exceptions.InvalidYearException;
 
 public class Car {
     private Integer id;

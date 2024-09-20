@@ -1,12 +1,9 @@
-package com.projeto1;
+package com.firstproject;
 
-import com.projeto1.connection.DriverConnection;
-import com.projeto1.daos.CarDAO;
-import com.projeto1.menus.MainMenu;
-import com.projeto1.services.CarService;
-import com.projeto1.utils.Keyboard;
-
-import java.sql.SQLException;
+import com.firstproject.connection.DriverConnection;
+import com.firstproject.daos.CarDAO;
+import com.firstproject.menus.MainMenu;
+import com.firstproject.services.CarService;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

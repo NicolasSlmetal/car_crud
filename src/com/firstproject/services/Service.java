@@ -1,6 +1,6 @@
-package com.projeto1.services;
+package com.firstproject.services;
 
-import com.projeto1.daos.DAO;
+import com.firstproject.daos.DAO;
 
 public abstract class Service<T> {
 

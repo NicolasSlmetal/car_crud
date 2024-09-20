@@ -1,4 +1,4 @@
-package com.projeto1.exceptions;
+package com.firstproject.exceptions;
 
 public class InvalidPortsNumberException extends RuntimeException{
 

@@ -1,8 +1,8 @@
-package com.projeto1.daos;
+package com.firstproject.daos;
 
-import com.projeto1.connection.DriverConnection;
-import com.projeto1.exceptions.CarNotFoundException;
-import com.projeto1.model.Car;
+import com.firstproject.connection.DriverConnection;
+import com.firstproject.exceptions.CarNotFoundException;
+import com.firstproject.model.Car;
 
 import java.sql.*;
 import java.util.ArrayList;

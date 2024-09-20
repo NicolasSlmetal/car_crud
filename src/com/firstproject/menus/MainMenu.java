@@ -1,8 +1,8 @@
-package com.projeto1.menus;
+package com.firstproject.menus;
 
-import com.projeto1.model.Car;
-import com.projeto1.services.Service;
-import com.projeto1.utils.Keyboard;
+import com.firstproject.model.Car;
+import com.firstproject.services.Service;
+import com.firstproject.utils.Keyboard;
 
 public class MainMenu {
 

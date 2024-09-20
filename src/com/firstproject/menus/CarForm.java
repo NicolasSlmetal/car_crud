@@ -1,10 +1,10 @@
-package com.projeto1.menus;
+package com.firstproject.menus;
 
-import com.projeto1.exceptions.EmptyFieldException;
-import com.projeto1.exceptions.InvalidPortsNumberException;
-import com.projeto1.exceptions.InvalidYearException;
-import com.projeto1.model.Car;
-import com.projeto1.utils.Keyboard;
+import com.firstproject.exceptions.EmptyFieldException;
+import com.firstproject.exceptions.InvalidPortsNumberException;
+import com.firstproject.exceptions.InvalidYearException;
+import com.firstproject.model.Car;
+import com.firstproject.utils.Keyboard;
 
 public class CarForm {
 

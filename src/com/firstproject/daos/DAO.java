@@ -1,4 +1,4 @@
-package com.projeto1.daos;
+package com.firstproject.daos;
 
 import java.util.List;
 
