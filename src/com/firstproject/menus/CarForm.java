@@ -8,23 +8,7 @@ import com.firstproject.utils.Keyboard;
 
 public class CarForm {
 
-    public static Car createCarFromUserInputs(){
-        Car car = new Car();
-        Exception ex;
-        do {
-            ex = null;
-            try {
-                promptAllCarFields(car);
-            } catch (InvalidYearException | InvalidPortsNumberException | EmptyFieldException exception) {
-                System.out.println(exception.getMessage());
-                ex = exception;
-            }
-        } while (ex != null);
-
-        return car;
-    }
-
-    private static void promptAllCarFields(Car car) {
+    public static void promptAllCarFields(Car car) {
         System.out.println("Digite o nome do carro: ");
         car.setName(Keyboard.readString());
         System.out.println("Digite a marca do carro: ");

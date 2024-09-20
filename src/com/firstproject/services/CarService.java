@@ -2,6 +2,9 @@ package com.firstproject.services;
 
 import com.firstproject.daos.DAO;
 import com.firstproject.exceptions.CarNotFoundException;
+import com.firstproject.exceptions.EmptyFieldException;
+import com.firstproject.exceptions.InvalidPortsNumberException;
+import com.firstproject.exceptions.InvalidYearException;
 import com.firstproject.menus.CarForm;
 import com.firstproject.menus.CarSheet;
 import com.firstproject.model.Car;
@@ -13,8 +16,23 @@ public class CarService extends Service<Car> {
         setDao(dao);
     }
 
+    public Car promptWithValidation(){
+        Car car = new Car();
+        Exception ex;
+        do {
+            ex = null;
+            try {
+                CarForm.promptAllCarFields(car);
+            } catch (InvalidYearException | InvalidPortsNumberException | EmptyFieldException exception) {
+                System.out.println(exception.getMessage());
+                ex = exception;
+            }
+        } while (ex != null);
+        return car;
+    }
+
     public void readFormAndSave(){
-        getDao().save(CarForm.createCarFromUserInputs());
+        getDao().save(promptWithValidation());
     }
 
     @Override
@@ -49,7 +67,7 @@ public class CarService extends Service<Car> {
         CarSheet.showCarInLine(car);
         if (CarForm.confirmActionOfUser("Deseja realmente atualizar esse carro?")){
             Integer id = car.getId();
-            car = CarForm.createCarFromUserInputs();
+            car = promptWithValidation();
             car.setId(id);
             getDao().update(car);
         }
