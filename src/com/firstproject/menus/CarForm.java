@@ -1,8 +1,5 @@
 package com.firstproject.menus;
 
-import com.firstproject.exceptions.EmptyFieldException;
-import com.firstproject.exceptions.InvalidPortsNumberException;
-import com.firstproject.exceptions.InvalidYearException;
 import com.firstproject.model.Car;
 import com.firstproject.utils.Keyboard;
 
