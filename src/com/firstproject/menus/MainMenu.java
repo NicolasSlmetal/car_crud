@@ -46,6 +46,7 @@ public class MainMenu {
                 service.deleteIfConfirmed();
                 break;
             case 6:
+                Keyboard.close();
                 System.out.println("Volte sempre!");
                 break;
             default:
