@@ -1,10 +1,7 @@
 package com.firstproject.services;
 
 import com.firstproject.daos.DAO;
-import com.firstproject.exceptions.CarNotFoundException;
-import com.firstproject.exceptions.EmptyFieldException;
-import com.firstproject.exceptions.InvalidPortsNumberException;
-import com.firstproject.exceptions.InvalidYearException;
+import com.firstproject.exceptions.*;
 import com.firstproject.menus.CarForm;
 import com.firstproject.menus.CarSheet;
 import com.firstproject.model.Car;
@@ -23,7 +20,8 @@ public class CarService extends Service<Car> {
             ex = null;
             try {
                 CarForm.promptAllCarFields(car);
-            } catch (InvalidYearException | InvalidPortsNumberException | EmptyFieldException exception) {
+            } catch (InvalidYearException | InvalidPortsNumberException | EmptyFieldException |
+                     InvalidPriceException exception) {
                 System.out.println(exception.getMessage());
                 ex = exception;
             }

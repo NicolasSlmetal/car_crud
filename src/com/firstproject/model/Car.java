@@ -2,6 +2,7 @@ package com.firstproject.model;
 
 import com.firstproject.exceptions.EmptyFieldException;
 import com.firstproject.exceptions.InvalidPortsNumberException;
+import com.firstproject.exceptions.InvalidPriceException;
 import com.firstproject.exceptions.InvalidYearException;
 
 public class Car {
@@ -118,6 +119,7 @@ public class Car {
     }
 
     public void setPrice(Double price) {
+        if (price < 3000 || price.isInfinite()) throw new InvalidPriceException(price);
         this.price = price;
     }
 
