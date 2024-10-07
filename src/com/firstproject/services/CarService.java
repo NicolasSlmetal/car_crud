@@ -78,7 +78,7 @@ public class CarService extends Service<Car> {
         Car car = findById();
         CarSheet.showCarInLine(car);
         if (CarForm.confirmActionOfUser("Deseja realmente excluir esse carro?")){
-            getDao().delete(car.getId());
+            getDao().delete(car);
         }
     }
 

@@ -133,16 +133,16 @@ public class CarDAO implements DAO<Car> {
         preparedStatement.setInt(10, model.getId());
     }
     @Override
-    public void delete(Integer id) {
+    public void delete(Car model) {
         try(Connection context = connection.startConnection()){
             String query = "DELETE FROM cars.cars WHERE car_id = ?";
             PreparedStatement preparedStatement = context.prepareStatement(query);
-            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(1, model.getId());
             preparedStatement.execute();
             preparedStatement.close();
-            System.out.printf("Carro com ID %d deletado\n", id);
+            System.out.printf("Carro com ID %d deletado\n", model.getId());
         } catch (SQLException | ClassNotFoundException e){
-            System.out.printf("Não foi possível deletar o Id %d\n", id);
+            System.out.printf("Não foi possível deletar o Id %d\n", model.getId());
             System.out.println("Erro: " + e.getMessage());
         }
     }
