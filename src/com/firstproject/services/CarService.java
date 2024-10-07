@@ -31,12 +31,12 @@ public class CarService extends Service<Car> {
 
     @Override
     public void readFormAndSave(){
-        getDao().save(promptWithValidation());
+        dao.save(promptWithValidation());
     }
 
     @Override
     public void findAllAndShow() {
-        CarSheet.showListOfCars(getDao().findAll());
+        CarSheet.showListOfCars(dao.findAll());
     }
 
     @Override
@@ -51,7 +51,7 @@ public class CarService extends Service<Car> {
         do {
             try {
                 ex = null;
-                car = getDao().findById(CarForm.promptId());
+                car = dao.findById(CarForm.promptId());
             } catch (CarNotFoundException exception) {
                 System.out.println(exception.getMessage());
                 ex = exception;
@@ -68,7 +68,7 @@ public class CarService extends Service<Car> {
             Integer id = car.getId();
             car = promptWithValidation();
             car.setId(id);
-            getDao().update(car);
+            dao.update(car);
         }
 
     }
@@ -78,7 +78,9 @@ public class CarService extends Service<Car> {
         Car car = findById();
         CarSheet.showCarInLine(car);
         if (CarForm.confirmActionOfUser("Deseja realmente excluir esse carro?")){
-            getDao().delete(car);
+
+            dao.delete(car);
+
         }
     }
 

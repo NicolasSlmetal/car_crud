@@ -4,7 +4,7 @@ import com.firstproject.daos.DAO;
 
 public abstract class Service<T> {
 
-    private DAO<T> dao;
+    protected DAO<T> dao;
 
     public abstract void readFormAndSave();
 
